@@ -1,4 +1,7 @@
 Wedding::Application.routes.draw do
+  resources :guest_groups
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

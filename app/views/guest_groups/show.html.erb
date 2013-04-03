@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Full name:</b>
+  <%= @guest_group.full_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @guest_group.email %>
+</p>
+
+<p>
+  <b>Kids:</b>
+  <%= @guest_group.kids %>
+</p>
+
+<p>
+  <b>Plus one:</b>
+  <%= @guest_group.plus_one %>
+</p>
+
+
+<%= link_to 'Edit', edit_guest_group_path(@guest_group) %> |
+<%= link_to 'Back', guest_groups_path %>
