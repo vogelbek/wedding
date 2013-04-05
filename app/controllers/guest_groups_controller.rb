@@ -21,6 +21,16 @@ class GuestGroupsController < ApplicationController
     end
   end
 
+  # GET /guest_groups/new
+  # GET /guest_groups/new.json
+  def new
+    @guest_group = GuestGroup.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @guest_group }
+    end
+  end
 
   # GET /guest_groups/1/edit
   def edit
