@@ -1,4 +1,4 @@
-class WeddingController < ActionController::Base
+class WeddingController < ApplicationController
   protect_from_forgery
   def index
   end
