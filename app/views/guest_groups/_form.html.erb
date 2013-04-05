@@ -1,3 +1,4 @@
+<% @guest_group ||= guest_group %>
 <%= form_for(@guest_group) do |f| %>
   <% if @guest_group.errors.any? %>
     <div id="error_explanation">

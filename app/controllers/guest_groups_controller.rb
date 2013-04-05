@@ -21,16 +21,6 @@ class GuestGroupsController < ApplicationController
     end
   end
 
-  # GET /guest_groups/new
-  # GET /guest_groups/new.json
-  def new
-    @guest_group = GuestGroup.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @guest_group }
-    end
-  end
 
   # GET /guest_groups/1/edit
   def edit
@@ -44,7 +34,7 @@ class GuestGroupsController < ApplicationController
 
     respond_to do |format|
       if @guest_group.save
-        format.html { redirect_to @guest_group, notice: 'Guest group was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Guest group was successfully created.' }
         format.json { render json: @guest_group, status: :created, location: @guest_group }
       else
         format.html { render action: "new" }
