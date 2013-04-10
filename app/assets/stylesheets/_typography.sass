@@ -9,6 +9,9 @@ h1
 h2
   +adjust-font-size-to(25px)
 
+p
+  +padding-trailer(1)
+
 @for $size from 1 through 5
   .line-#{$size}
     $local-size: $size * 5px + 15px
