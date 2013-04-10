@@ -1,0 +1,11 @@
+$sections: overview what where
+$colors: #333 #666 #999
+
+@function text-color($background)
+  @return contrast-color($background, #222, #ccc, 50%)
+
+@each $section in zip($sections, $colors)
+  .#{nth($section, 1)}
+    background:
+      color: nth($section, 2)
+    color: text-color(nth($section, 2))
