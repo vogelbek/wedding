@@ -2,7 +2,7 @@ $sections: overview what where
 $colors: #333 #666 #999
 
 @function text-color($background)
-  @return contrast-color($background, #222, #ccc, 50%)
+  @return contrast-color($background, #222, #ddd, 50%)
 
 @each $section in zip($sections, $colors)
   .#{nth($section, 1)}
