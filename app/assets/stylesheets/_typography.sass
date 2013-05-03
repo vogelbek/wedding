@@ -2,6 +2,18 @@ $base-font-size: 15px
 $base-line-height: 25px
 +establish-baseline
 
+
+@font-face
+  font:
+    family: 'BloodCrow'
+    weight: normal
+    style: normal
+  src: asset-url('bloodcrow.ttf', font)
+
+.blood
+  font:
+    font-family: 'BloodCrow', sans-serif
+
 h1
   +adjust-font-size-to(40px)
   +padding-leader(1, 40px)
