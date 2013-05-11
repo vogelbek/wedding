@@ -10,27 +10,38 @@ $base-line-height: 25px
     weight: normal
     style: normal
 
+%site-wide-font
+  font:
+    family: sans-serif
 
+%blood
+  font:
+    family: 'bloodcrow', sans-serif
 
 .overview
   text:
     align: center
   .blood
-    font:
-      family: 'bloodcrow', sans-serif
+    color: $totem-pole
     +adjust-font-size-to(80px)
     +padding-leader(0,80px)
-    color: red
 
 h1
+  @extend %site-wide-font
+  @extend %blood
   +adjust-font-size-to(40px)
   +padding-leader(1, 40px)
 
 h2
+  @extend %site-wide-font
   +adjust-font-size-to(25px)
 
 p
+  @extend %site-wide-font
   +padding-trailer(1)
+
+time, address
+  @extend %site-wide-font
 
 @for $size from 1 through 5
   .line-#{$size}
