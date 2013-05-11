@@ -1,11 +1,14 @@
-$sections: overview what where
-$colors: #333 #666 #999
+$sections: overview rsvp what where
+$colors: #333 #444 #666 #999
 
 @function text-color($background)
   @return contrast-color($background, #222, #ddd, 50%)
 
 @each $section in zip($sections, $colors)
   .#{nth($section, 1)}
+    padding:
+      left: 80px
+      right: 80px
     background:
       color: nth($section, 2)
     color: text-color(nth($section, 2))

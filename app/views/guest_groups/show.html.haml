@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Full name:
+  = @guest_group.full_name
+%p
+  %b Email:
+  = @guest_group.email
+%p
+  %b Kids:
+  = @guest_group.kids
+%p
+  %b Plus one:
+  = @guest_group.plus_one
+
+= link_to 'Edit', edit_guest_group_path(@guest_group)
+\|
+= link_to 'Back', guest_groups_path
