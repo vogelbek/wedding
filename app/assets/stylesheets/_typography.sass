@@ -4,28 +4,49 @@ $base-line-height: 25px
 
 
 @font-face
+  src: asset-url('bloodcrow.ttf', font) format('truetype')
   font:
-    family: 'BloodCrow'
+    family: 'bloodcrow'
     weight: normal
     style: normal
-  src: asset-url('bloodcrow.ttf', font)
 
-.blood
+%site-wide-font
   font:
-    font-family: 'BloodCrow', sans-serif
+    family: sans-serif
+
+%blood
+  font:
+    family: 'bloodcrow', sans-serif
+
+.overview
+  text:
+    align: center
+  .blood
+    color: $totem-pole
+    +adjust-font-size-to(80px)
+    +padding-leader(0,80px)
 
 h1
+  @extend %site-wide-font
+  @extend %blood
   +adjust-font-size-to(40px)
   +padding-leader(1, 40px)
 
 h2
+  @extend %site-wide-font
   +adjust-font-size-to(25px)
 
 p
+  @extend %site-wide-font
   +padding-trailer(1)
+  text:
+    align: justify
+
+time, address
+  @extend %site-wide-font
 
 @for $size from 1 through 5
   .line-#{$size}
-    $local-size: $size * 5px + 15px
+    $local-size: $size * 5px + 25px
     +adjust-font-size-to($local-size)
     +padding-leader(0, $local-size)

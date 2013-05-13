@@ -1,0 +1,17 @@
+.row
+  +row(5%)
+
+%one_col
+  +col(1, 1, 5%, 2%)
+
+%two_col
+  +col(2, 1, 5%, 2%)
+
+.overview.copy
+  @extend %one_col
+
+.what.copy
+  @extend %two_col
+
+.where.copy
+  @extend %two_col

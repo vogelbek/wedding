@@ -1,14 +1,24 @@
 $sections: overview rsvp what where
-$colors: #333 #444 #666 #999
+$colors: $deep-fir $oregon $eternity $deep-fir
 
 @function text-color($background)
   @return contrast-color($background, #222, #ddd, 50%)
 
 @each $section in zip($sections, $colors)
-  .#{nth($section, 1)}
+  section.#{nth($section, 1)}
     padding:
       left: 80px
       right: 80px
     background:
       color: nth($section, 2)
     color: text-color(nth($section, 2))
+
+section.where
+  background:
+    image: url('timberline-dusk.jpg')
+    position: 30% 40%
+  color: $totem-pole
+  @media (min-width: 1600px)
+    background:
+      size: 100% auto
+      position: 30% 60%
