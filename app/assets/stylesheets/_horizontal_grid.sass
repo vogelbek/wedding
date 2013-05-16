@@ -1,5 +1,5 @@
 .row
-  +row(5%)
+  +row(5%, 2%)
 
 %one_col
   +col(1, 1, 5%, 2%)
@@ -7,11 +7,22 @@
 %two_col
   +col(2, 1, 5%, 2%)
 
+%three_col
+  +col(3, 1, 5%, 2%)
+
 .overview.copy
   @extend %one_col
 
-.what.copy
-  @extend %two_col
+.what
+  .copy
+    @extend %two_col
+    float: left
+  .block
+    float: right
+    border: white 2px solid
+    +rhythm-borders(2px, 2, $base-font-size, solid)
+    +margin-leader(1, $base-font-size)
 
 .where.copy
   @extend %two_col
+
