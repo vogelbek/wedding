@@ -1,0 +1,25 @@
+%h1 Listing guest_groups
+
+%table
+  %tr
+    %th Full name
+    %th Email
+    %th Kids
+    %th Plus one
+    %th
+    %th
+    %th
+
+  - @guest_groups.each do |guest_group|
+    %tr
+      %td= guest_group.full_name
+      %td= guest_group.email
+      %td= guest_group.kids
+      %td= guest_group.plus_one
+      %td= link_to 'Show', guest_group
+      %td= link_to 'Edit', edit_guest_group_path(guest_group)
+      %td= link_to 'Destroy', guest_group, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Guest group', new_guest_group_path

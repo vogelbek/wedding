@@ -6,6 +6,9 @@ $colors: $deep-fir $oregon $eternity $deep-fir
 
 @each $section in zip($sections, $colors)
   section.#{nth($section, 1)}
+    padding:
+      left: 80px
+      right: 80px
     background:
       color: nth($section, 2)
     color: text-color(nth($section, 2))

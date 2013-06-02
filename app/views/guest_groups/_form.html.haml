@@ -1,0 +1,26 @@
+%h1.overview.copy.line-5.blood R.S.V.P.
+.rsvp_form
+  = form_for @guest_group do |f|
+    - if @guest_group.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@guest_group.errors.count, "error")} prohibited this guest_group from being saved:"
+        %ul
+          - @guest_group.errors.full_messages.each do |msg|
+            %li= msg
+
+    .field
+      = f.label :full_name
+      = f.text_field :full_name
+    .field
+      = f.label :email
+      = f.text_field :email
+    .field
+      = f.label :kids
+      = f.number_field :kids
+    .field
+      = f.label :plus_one
+      = f.check_box :plus_one
+    .actions
+      = f.submit 'Submit RSVP'
+.save_the_date
+  = image_tag 'save_the_date.png', height: '400', width: '600'
