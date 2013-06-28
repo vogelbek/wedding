@@ -2,6 +2,9 @@ $base-font-size: 20px
 $base-line-height: 25px
 +establish-baseline
 
+body
+  color: $totem-pole
+  @extend %blood
 
 @font-face
   src: asset-url('bloodcrow.ttf', font) format('truetype')
@@ -42,7 +45,15 @@ p
   text:
     align: justify
 
-time, address
+a
+  @extend %blood
+  color: $oregon
+  &:visited
+    color: $oregon
+  &:hover
+    color: $totem-pole
+
+time, address, label, input, textarea
   @extend %site-wide-font
 
 @for $size from 1 through 5

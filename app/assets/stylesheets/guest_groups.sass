@@ -1,6 +1,9 @@
 // Place all the styles related to the guest_groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "compass/css3/border-radius"
+$default-border-radius: 15px 
+
 .save_the_date
   @extend %two_col
   float: left
@@ -10,6 +13,11 @@
 .rsvp_form
   @extend %two_col
   float: left
+#error_explanation
+  +col(1, 1, 0, 0)
+  margin-bottom: $base-line-height
+  h2
+    @extend %blood
 form
   +row(0, 0)
 .field
@@ -33,6 +41,39 @@ form
 .checkbox
   +col(1, 1, 0, 0)
   float: left
+  margin-bottom: $base-line-height
+.textarea
+  height: 4*$base-line-height
+  margin-bottom: $base-line-height
+  position: relative
+  +col(1, 1, 0, 0)
+  float: left
+  textarea
+    position: absolute
+    height: 100%
+    width: 75%
+    top: 0
+    bottom: 0
+    right: 0
+  label
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 25%
 .actions
   +col(1, 1, 0, 0)
   float: left
+  input
+    +col(4, 2, 0, 0, 1, 0)
+    @extend h1
+    color: white
+    background-color: $eternity
+    +border-radius()
+    margin: auto auto
+    +padding-leader(0)
+    +padding-trailer(0)
+    &:hover
+      background-color: $totem-pole
+      color: $eternity
+      cursor: pointer
