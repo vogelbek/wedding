@@ -6,6 +6,7 @@ $colors: $deep-fir $oregon $eternity $deep-fir
 
 @each $section in zip($sections, $colors)
   section.#{nth($section, 1)}
+    @extend %row
     padding:
       left: 80px
       right: 80px
@@ -22,3 +23,6 @@ section.where
     background:
       size: 100% auto
       position: 30% 60%
+
+html
+  background-color: black
