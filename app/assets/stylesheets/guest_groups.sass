@@ -2,12 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .save_the_date
-  position: relative
-  top:  -100px
-  left: 500px
+  @extend %two_col
+  float: left
+  img
+    width: 100%
+    height: auto
 .rsvp_form
-  position: relative
-  top:  100px
+  @extend %two_col
+  float: left
+form
+  +row(0, 0)
 .field
-  padding: 4px
-  margin-top: 10px
+  height: $base-line-height
+  margin-bottom: $base-line-height
+  position: relative
+  +col(1, 1, 0, 0)
+  
+  label
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 25%
+  input
+    position: absolute
+    width: 75%
+    top: 0
+    bottom: 0
+    right: 0
+.checkbox
+  +col(1, 1, 0, 0)
+  float: left
+.actions
+  +col(1, 1, 0, 0)
+  float: left

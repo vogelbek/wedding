@@ -19,9 +19,11 @@
     float: left
   .block
     float: right
-    border: white 2px solid
-    +rhythm-borders(2px, 2, $base-font-size, solid)
+    +rhythm-borders(2px, 1, $base-font-size, solid)
     +margin-leader(1, $base-font-size)
+    +padding-leader(0, $base-font-size)
+    h1
+      +padding-leader(0, 40px)
 
 .where.copy
   @extend %two_col
