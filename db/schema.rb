@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130403223904) do
+ActiveRecord::Schema.define(:version => 20130628142907) do
 
   create_table "guest_groups", :force => true do |t|
     t.string   "full_name"
     t.string   "email"
     t.integer  "kids"
     t.boolean  "plus_one"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.text     "vulnerabilities"
   end
 
 end
