@@ -8,6 +8,7 @@ require 'bundler/capistrano'
 set :domain, "bigwhiteweddingofterror.com"
 set :application, "wedding"
 set :deploy_to, "/var/www/#{application}"
+set :rails_env, "production"
  
 set :user, "deploy"
 set :use_sudo, false
