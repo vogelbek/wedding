@@ -22,3 +22,27 @@ role :app, domain
 role :db,  domain, :primary => true
  
 set :deploy_via, :remote_cache
+
+
+namespace :rvm do
+  task :trust_rvmrc do
+    run "rvm rvmrc trust #{current_release}"
+  end
+end
+
+namespace :deploy do
+  task :start, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+
+  task :stop, :roles => :app do
+    # Do nothing.
+  end
+
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_release}/tmp/restart.txt"
+  end
+end
+
+after "deploy", "rvm:trust_rvmrc"
